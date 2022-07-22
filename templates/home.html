@@ -1,5 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block body %}
+<!-- Include (insert) navbar html into home page body -->
+{% include 'navbar.html' %}
+
 <h1>Hello Home.html</h1>
 
 <h3>User Info :</h3>
 <h5>name : {{request.user}}</h5>
 <h5>Athentication : {{request.user.is_authenticated}}</h5>
+{% endblock body %}
