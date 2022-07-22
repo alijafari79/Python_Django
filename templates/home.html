@@ -8,9 +8,22 @@
 <!-- Include (insert) navbar html into home page body -->
 {% include 'navbar.html' %}
 
+<h3>Ages : </h3>
+
+
+<nav>
+    <ul>
+        {% for age in ages %}
+            <li>{{forloop.counter}} : {{age}}</li>
+        {% endfor %}
+    </ul>
+</nav>
+
+
 <h1>Hello Home.html</h1>
 
 <h3>User Info :</h3>
 <h5>name : {{request.user}}</h5>
 <h5>Athentication : {{request.user.is_authenticated}}</h5>
+
 {% endblock body %}
